@@ -100,7 +100,6 @@ def create_book(book_data: Book):
 
     new_book["id"] = len(BOOKS) +1
     BOOKS.append(new_book)
-    return BOOKS
 
 
 @app.post("/update_book", status_code=status.HTTP_204_NO_CONTENT)
