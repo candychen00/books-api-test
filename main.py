@@ -3,7 +3,11 @@ from starlette import status
 from pydantic import BaseModel, Field, ConfigDict
 from typing import Annotated
 
-app = FastAPI()
+app = FastAPI(
+    title="Books API",
+    description="API documentation for my first books api",
+    version="1.0.0",
+)
 
 class Book(BaseModel):
     id: int | None = Field(description= "ID is not needed on create", default=None)
