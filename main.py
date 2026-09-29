@@ -102,7 +102,7 @@ def create_book(book_data: Book):
     BOOKS.append(new_book)
 
 
-@app.post("/update_book", status_code=status.HTTP_204_NO_CONTENT)
+@app.put("/update_book", status_code=status.HTTP_204_NO_CONTENT)
 def update_book(new_content: Book):
     book_changed = False
     for i in range(len(BOOKS)):
